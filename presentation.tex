@@ -9,7 +9,10 @@
 \usetikzlibrary{positioning}
 \usetikzlibrary{mindmap}
 \usetikzlibrary{decorations.text}
+\usetikzlibrary{shapes}
 
+% reveal mindmap step by step
+% http://tex.stackexchange.com/questions/55806/mindmap-tikzpicture-in-beamer-reveal-step-by-step
 \tikzset{
 	invisible/.style={opacity=0},
 	visible on/.style={alt=#1{}{invisible}},
@@ -18,10 +21,18 @@
 	},
 }
 
+% image paths
+\graphicspath{{images/}}
+
+% title information
+% title information
+% title information
 \title[WeBWorK]{WeBWorK-- a Faculty-driven Homework Management System}
 \author[Jordan, Hughes, Yao]{Alex Jordan \and Chris Hughes \and Xialong Yao}
 \institute[PCC]{Portland Community College}
 \date{February 17, 2014}
+
+\includeonlyframes{timeline}
 \begin{document}
 
 \begin{frame}
@@ -32,8 +43,6 @@
 	{\includegraphics[width=.75\textwidth]{WeBWorK-logo-tikz}};
 	\titlepage
 \end{frame}
-
-%Let me know if there is anything out of place or something you think should be moved to another page.
 
 \begin{frame}
 	\centering
@@ -81,7 +90,25 @@
 \end{frame}
 
 %----------------------------------------------------------------------------------------------------------------------------------------------------------------
-\begin{frame}
-	timeline- fancy home-made graphic detailing the journey
+\begin{frame}[label=timeline]{The journey\ldots}
+\begin{tikzpicture}[cloudy/.style={cloud,draw,double,thick,align=center},]
+	\pause
+    \node[cloudy,draw=gray,cloud puffs=10,aspect=2.3](spring2010){Spring 2010};
+    \node[below=0mm of spring2010]{\includegraphics[width=1cm]{firststep}};
+    \pause
+    \node[cloudy,draw=gray,right=of spring2010,cloud puffs=10,aspect=2.3](summer2010){Summer 2010};
+    \node[below=0mm of summer2010]{\includegraphics[width=3cm]{alexcodes}};
+    \pause
+    \node[cloudy,draw=gray,right=of summer2010,cloud puffs=10,aspect=2.3](fall2010){Fall 2010};
+    \node[below=0mm of fall2010]{\includegraphics[width=3cm]{universityoforegon}};
+	%\pause
+	%\node[cloud,below right=of formats,fill=blue!20, cloud puffs=13, aspect=1.8](mathml)    {MathML?\\MathJax?};
+	%\pause
+	%\node[left=0.75cm of mathml, fill=yellow!30, minimum height=2.5cm, cloud puffs=17, aspect=2](final){Best \\ practices?};
+	%\pause
+	%\node[left=0.75cm of final, fill=green!20, cloud puffs=13, aspect=3](best){Faculty\\ responsibilities?};
+ 	%\pause
+	%\node[left=of formats, fill=orange!30, minimum width=2cm,minimum height=3cm,cloud puffs=13, aspect=0.9]{Final \\ product?};
+\end{tikzpicture}
 \end{frame}
 \end{document}
