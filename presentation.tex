@@ -32,6 +32,22 @@
    },
 }
 
+% stars
+\pgfdeclaredecoration{stars}{initial}{
+   \state{initial}[width=15pt]
+   {
+      \pgfmathparse{round(rnd*100)}
+      \pgfsetfillcolor{yellow!\pgfmathresult!orange}
+      \pgfsetstrokecolor{yellow!\pgfmathresult!red}
+      \pgfnode{star}{center}{}{}{\pgfusepath{stroke,fill}}
+   }
+   \state{final}
+   {
+      \pgfpathmoveto{\pgfpointdecoratedpathlast}
+   }
+}
+
+
 % image paths
 \graphicspath{{images/}}
 
@@ -43,7 +59,7 @@
 \institute[PCC]{Portland Community College}
 \date{February 17, 2014}
 
-%\includeonlyframes{support}
+%\includeonlyframes{success}
 \begin{document}
 
 \begin{frame}
@@ -55,7 +71,7 @@
    \titlepage
 \end{frame}
 
-\begin{frame}
+\begin{frame}[label=definition]
    \centering
    \resizebox{.87\textwidth}{!}{%
       \begin{tikzpicture}[mindmap,
@@ -155,23 +171,40 @@
       % We received official support to move forward with our own server:
       % webwork.pcc.edu
       \node[cloudy](winter2013){Winter 2013};
-         \node[below=0mm of winter2013]{\includegraphics[width=3cm]{handshake}};
+      \node[below=0mm of winter2013]{\includegraphics[width=3cm]{handshake}};
       \pause
          % Spring, Summer 2013
          % Alex, Carl, and Chris coded furiously to complete
          % MTH 60 and 65 problems; sadly there was not enough time for
          % MTH 95
          \node[cloudy, right=of winter2013](summer2013){Summer 2013};
-            \node[below=0mm of summer2013]{\includegraphics[width=3cm]{collaboration}};
+         \node[below=0mm of summer2013]{\includegraphics[width=3cm]{collaboration}};
       \pause
          % Fall 2013
          % Alex, Carl and Chris announce their success to the SAC,
          % which is very shortly followed by an EPIC crash on the UO server
          \node[cloudy,fill=green,draw=red, right=of summer2013](fall2013){Fall 2013};
-      \pause
-         % Winter 2014
-         % webwork.pcc.edu goes live, and works wonderfully well
-         \node[below=-1cm of summer2013,star,very thick, double,fill=yellow,draw=orange] {Winter 2014};
    \end{tikzpicture}
 \end{frame}
+
+\begin{frame}[label=success]{Success}
+   \centering
+   \begin{tikzpicture}
+      % Winter 2014
+      % webwork.pcc.edu goes live, and works wonderfully well
+      \node[star,very thick, double,fill=yellow,draw=orange](winter2014) {Winter 2014};;
+      \path[decorate, decoration=stars, star point ratio=2, star points=5,
+         inner sep=0, minimum size=rnd*10pt+2pt]
+         circle (3cm);
+   \end{tikzpicture}
+   \href{https://webwork.pcc.edu/webwork2/}{https://webwork.pcc.edu/webwork2/}
+\end{frame}
 \end{document}
+
+% some junk I was trying with the success frame
+%\path[decorate, decoration=stars, star point ratio=2, star points=5,
+%inner sep=0, minimum size=rnd*10pt+2pt]
+%(winter2014.north west) .. controls (-3,2) and (-4,2) .. (-5,0)
+%.. controls (-3,0) and (-3,-1) .. (-4,-3)
+%.. controls (-2,-5) and (-1,-5) .. (0,-2)
+%.. controls (2,-5) and (1,-5) .. (4,-3);

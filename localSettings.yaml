@@ -4,3 +4,4 @@ indentAfterItems:
    columns: 1
 itemNames:
    pause: 1
+   path: 1
