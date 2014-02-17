@@ -108,16 +108,25 @@
 \end{tikzpicture}
 \small
 \begin{columns}[t]
-    \begin{column}{.33\textwidth}
+    \begin{column}[T]{.33\textwidth}
+      \begin{tikzpicture}
+        \node[draw=gray,rounded corners,minimum width=\textwidth,top color=white,bottom color=yellow] {%
+        \vbox{%
         \begin{itemize}
 		\item[95] Arnie Pizer and Mike Gage at University of Rochester inspired by CAPA
 		\item[96] WeBWorK named, first courses taught
 		\item[97] used outside of Rochester %at Johns Hopkins first 
 		\item[02] Perl4$\to$Perl5, version control begins
         \end{itemize}
+        }
+        };
+      \end{tikzpicture}
     \end{column}%
     \hfill\pause
-    \begin{column}{.33\textwidth}
+    \begin{column}[T]{.33\textwidth}
+      \begin{tikzpicture}
+        \node[draw=gray,rounded corners,minimum width=\textwidth,top color=green!10!white,bottom color=cyan!50] {%
+        \vbox{%
         \begin{itemize}
         		\item[03] WeBWorK 2:  Math Objects, quizzes, jsMath, more
 		\item[05] National Problem Library
@@ -125,9 +134,15 @@
 		\item[09] MathJax opens accessibility doors
             	\item[10] MAA grant to disseminate
         \end{itemize}
+        }
+        };
+      \end{tikzpicture}
     \end{column}%
     \hfill\pause
-    \begin{column}{.33\textwidth}
+    \begin{column}[T]{.33\textwidth}
+      \begin{tikzpicture}
+        \node[draw=gray,rounded corners,minimum width=\textwidth,top color=blue!30!white,bottom color=purple!80!blue,opacity=.5,text opacity=1] {%
+        \vbox{%
         \begin{itemize}
         		\item[11] git repository and development accelerates:\\
 		WeBWorK 2.6 %configuration files, Math Achievements, more
@@ -135,6 +150,9 @@
 		\item[13]  WeBWorK 2.8 % improved instructor interface, OPL, much more
 		\item[14] initial sketching of WeBWorK 3 is underway
         \end{itemize}
+        }
+        };
+      \end{tikzpicture}
     \end{column}
 \end{columns}
 \end{frame}
