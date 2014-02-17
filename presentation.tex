@@ -72,6 +72,112 @@
    \titlepage
 \end{frame}
 
+\begin{frame}
+   \includegraphics[width=\textwidth]{map}
+
+\end{frame}
+
+\begin{frame}
+\begin{block}{WeBWorK at PCC login}
+\centering
+\url{http://webwork.pcc.edu}
+
+\begin{description}
+\item[Username:] a1--z9 (lowercase!)
+\item[Password:] pass (lowercase!)
+\end{description}
+
+\end{block}
+\end{frame}
+
+\begin{frame}{WeBWorK history}
+WeBWorK history
+\end{frame}
+
+%----------------------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}[label=timeline]{PCC's journey\ldots}
+   \begin{tikzpicture}
+      \pause
+         % Spring 2010
+         % Alex joins PCC and starts using WeBWorK on his own-
+         % he spoke to Holli Adams (department chair at the time)
+         % and arranges to have courses hosted at Rochester
+         \node[cloudy](spring2010){Spring 2010};
+         \node[below=0mm of spring2010]{\includegraphics[width=1cm]{firststep}};
+      \pause
+         % Summer 2010
+         % Alex codes problems from our current text books for
+         % MTH 60, 65, 95 single handedly
+         \node[cloudy,right=of spring2010](summer2010){Summer 2010};
+         \node[below=0mm of summer2010]{\includegraphics[width=3cm]{alexcodes}};
+      \pause
+         % Fall 2010
+         % Alex makes arrangements with University of Oregon
+         % and a small number of faculty joined him in using WeBWorK
+         \node[cloudy,right=of summer2010](fall2010){Fall 2010};
+         \node[below=0mm of fall2010](uofo){\includegraphics[width=3cm]{universityoforegon}};
+      \pause
+         % Winter 2011
+         % Alex and Chris contacted Tammy- they were too busy with
+         % migration to gmail; they rejected us
+         \node[cloudy,below=-.1cm of uofo](winter2011){Winter 2011};
+         \node[below=0mm of winter2011]{\includegraphics[width=3cm]{emailtss}};
+      \pause
+         % Fall 2011
+         % PCC starts targetting Accessibility- administrative buzz word
+         % at every meeting
+         \node[cloudy,left=of winter2011](fall2011){Fall 2011};
+         \node[below=0mm of fall2011]{\includegraphics[width=3cm]{access}};
+      \pause
+         % Fall 2012
+         % Chris and Scot get release time to study accessibility,
+         % and introduce Alex to Karen and Kaela; the world of PCC changes.
+         %
+         % During this time period (Spring 2010-Fall2012) there is an
+         % increased presence of MML; accessibility tests failed in Fall 2012
+         \node[cloudy,left=2cm of fall2011](fall2012){Fall 2012};
+         % every administrator now starts to listen to Alex's e-mails
+         % about WeBWorK
+         \pause
+         \node[below=0mm of fall2012]{\includegraphics[width=3cm]{listening}};
+   \end{tikzpicture}
+\end{frame}
+
+\begin{frame}[label=support]{Support}
+   \begin{tikzpicture}
+      % Winter 2013
+      % We received official support to move forward with our own server:
+      % webwork.pcc.edu
+      \node[cloudy](winter2013){Winter 2013};
+      \node[below=0mm of winter2013]{\includegraphics[width=3cm]{handshake}};
+      \pause
+         % Spring, Summer 2013
+         % Alex, Carl, and Chris coded furiously to complete
+         % MTH 60 and 65 problems; sadly there was not enough time for
+         % MTH 95
+         \node[cloudy, right=of winter2013](summer2013){Summer 2013};
+         \node[below=0mm of summer2013]{\includegraphics[width=3cm]{collaboration}};
+      \pause
+         % Fall 2013
+         % Alex, Carl and Chris announce their success to the SAC,
+         % which is very shortly followed by an EPIC crash on the UO server
+         \node[cloudy,fill=green,draw=red, right=of summer2013](fall2013){Fall 2013};
+   \end{tikzpicture}
+\end{frame}
+
+\begin{frame}[label=success]{Success}
+   \centering
+   \begin{tikzpicture}
+      % Winter 2014
+      % webwork.pcc.edu goes live, and works wonderfully well
+      \node[star,very thick, double,fill=yellow,draw=orange](winter2014) {Winter 2014};;
+      \path[decorate, decoration=stars, star point ratio=2, star points=5,
+         inner sep=0, minimum size=rnd*10pt+2pt]
+         circle (3cm);
+   \end{tikzpicture}
+   \href{https://webwork.pcc.edu/webwork2/eLearning2014}{https://webwork.pcc.edu/webwork2/eLearning2014}
+\end{frame}
+
 \begin{frame}[label=definition]
    \centering
    \resizebox{.87\textwidth}{!}{%
@@ -117,89 +223,10 @@
    }
 \end{frame}
 
-%----------------------------------------------------------------------------------------------------------------------------------------------------------------
-\begin{frame}[label=timeline]{The journey\ldots}
-   \begin{tikzpicture}
-      \pause
-         % Spring 2010
-         % Alex joins PCC and starts using WeBWorK on his own-
-         % he spoke to Holli Adams (department chair at the time)
-         % and arranges to have courses hosted at Rochester
-         \node[cloudy](spring2010){Spring 2010};
-         \node[below=0mm of spring2010]{\includegraphics[width=1cm]{firststep}};
-      \pause
-         % Summer 2010
-         % Alex codes problems from our current text books for
-         % MTH 60, 65, 95 single handedly
-         \node[cloudy,right=of spring2010](summer2010){Summer 2010};
-         \node[below=0mm of summer2010]{\includegraphics[width=3cm]{alexcodes}};
-      \pause
-         % Fall 2010
-         % Alex makes arrangements with University of Oregon
-         % and a small number of faculty joined him in using WeBWorK
-         \node[cloudy,right=of summer2010](fall2010){Fall 2010};
-         \node[below=0mm of fall2010](uofo){\includegraphics[width=3cm]{universityoforegon}};
-      \pause
-         % Winter 2011
-         % Alex and Chris contacted Tammy- they were too busy with
-         % migration to gmail; they rejected us
-         \node[cloudy,below=-.1cm of uofo](winter2011){Winter 2011};
-         \node[below=0mm of winter2011]{\includegraphics[width=3cm]{emailtss}};
-      \pause
-         % Fall 2011
-         % PCC starts targetting Accessibility- administrative buzz word
-         % at every meeting
-         \node[cloudy,left=of winter2011](fall2011){Fall 2011};
-         \node[below=0mm of fall2011]{\includegraphics[width=3cm]{access}};
-      \pause
-         % Fall 2012
-         % Chris and Scot get release time to study accessibility,
-         % and introduce Alex to Karen and Kaela; the world of PCC changes.
-         %
-         % During this time period (Spring 2010-Fall2012) there is an
-         % increased presence of MML; accessibility tests failed in Fall 2012
-         \node[cloudy,left=2cm of fall2011](fall2012){Fall 2012};
-         % every administrator now starts to listen to Alex's e-mails
-         % about WeBWorK
-         \node[below=0mm of fall2012]{\includegraphics[width=3cm]{listening}};
-   \end{tikzpicture}
-\end{frame}
 
-\begin{frame}[label=support]{Support}
-   \begin{tikzpicture}
-      % Winter 2013
-      % We received official support to move forward with our own server:
-      % webwork.pcc.edu
-      \node[cloudy](winter2013){Winter 2013};
-      \node[below=0mm of winter2013]{\includegraphics[width=3cm]{handshake}};
-      \pause
-         % Spring, Summer 2013
-         % Alex, Carl, and Chris coded furiously to complete
-         % MTH 60 and 65 problems; sadly there was not enough time for
-         % MTH 95
-         \node[cloudy, right=of winter2013](summer2013){Summer 2013};
-         \node[below=0mm of summer2013]{\includegraphics[width=3cm]{collaboration}};
-      \pause
-         % Fall 2013
-         % Alex, Carl and Chris announce their success to the SAC,
-         % which is very shortly followed by an EPIC crash on the UO server
-         \node[cloudy,fill=green,draw=red, right=of summer2013](fall2013){Fall 2013};
-   \end{tikzpicture}
-\end{frame}
-
-\begin{frame}[label=success]{Success}
-   \centering
-   \begin{tikzpicture}
-      % Winter 2014
-      % webwork.pcc.edu goes live, and works wonderfully well
-      \node[star,very thick, double,fill=yellow,draw=orange](winter2014) {Winter 2014};;
-      \path[decorate, decoration=stars, star point ratio=2, star points=5,
-         inner sep=0, minimum size=rnd*10pt+2pt]
-         circle (3cm);
-   \end{tikzpicture}
-   \href{https://webwork.pcc.edu/webwork2/eLearning2014}{https://webwork.pcc.edu/webwork2/eLearning2014}
-\end{frame}
 \end{document}
+
+
 
 % some junk I was trying with the success frame
 %\path[decorate, decoration=stars, star point ratio=2, star points=5,
