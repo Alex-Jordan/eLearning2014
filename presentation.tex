@@ -60,7 +60,7 @@
 \institute[PCC]{Portland Community College}
 \date{February 17, 2014}
 
-%\includeonlyframes{success}
+%\includeonlyframes{wwhistory}
 \begin{document}
 
 \begin{frame}
@@ -90,8 +90,34 @@
 \end{block}
 \end{frame}
 
-\begin{frame}{WeBWorK history}
-WeBWorK history
+\begin{frame}[label=wwhistory]{WeBWorK history}
+
+  Here's a possible starting point for the timeline- feel free 
+  to delete it if you already have something :)
+  \centering
+  \begin{tikzpicture}
+       %draw horizontal line   
+       \draw (0,0) -- (8,0);
+
+       %draw hours
+       \foreach \x/\mydescription  in {0/Fall 2011,5/Aug 2012,8/Fall 2012} {% 
+            \draw (\x,0) node[below=7pt,anchor=east,xshift=0,rotate=45](\mydescription) {\mydescription}; 
+            \draw[] (\x,-0.3) -- (\x,0.3);
+            }
+            \node[below=of Fall 2011,align=center](PCC){PCC's big push};
+            \pause
+            \node[below=of PCC,align=center](SAC){Dept. meets and\\ forms committee};
+            \pause
+            \node[below=of SAC,align=center]{Initial experiments};
+            \pause
+            %\node[below=of May 2012,align=center]{Further talks};
+            \node[below=of Aug 2012,align=center](release){Release time \\ approved};
+            \pause
+            \node[below=of release,align=center]{One or two instructors?};
+            \pause
+            \node[below=of Fall 2012]{Project begins};
+   \end{tikzpicture}
+   
 \end{frame}
 
 %----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -161,6 +187,7 @@ WeBWorK history
          % Fall 2013
          % Alex, Carl and Chris announce their success to the SAC,
          % which is very shortly followed by an EPIC crash on the UO server
+         \node[xshift=-0.8cm,yshift=-1.7cm,right=of summer2013]{\includegraphics[width=3cm]{lightning}};
          \node[cloudy,fill=green,draw=red, right=of summer2013](fall2013){Fall 2013};
    \end{tikzpicture}
 \end{frame}
@@ -175,7 +202,7 @@ WeBWorK history
          inner sep=0, minimum size=rnd*10pt+2pt]
          circle (3cm);
    \end{tikzpicture}
-   \href{https://webwork.pcc.edu/webwork2/eLearning2014}{https://webwork.pcc.edu/webwork2/eLearning2014}
+   \href{https://webwork.pcc.edu/webwork2/}{https://webwork.pcc.edu/webwork2/}
 \end{frame}
 
 \begin{frame}[label=definition]
