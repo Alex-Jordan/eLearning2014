@@ -83,6 +83,7 @@
 \url{http://webwork.pcc.edu}
 
 \begin{description}
+\item[Course:] eLearning2014
 \item[Username:] a1--z9 (lowercase!)
 \item[Password:] pass (lowercase!)
 \end{description}
@@ -91,39 +92,66 @@
 \end{frame}
 
 \begin{frame}[label=wwhistory]{WeBWorK history}
+\begin{tikzpicture}
+    %draw horizontal line
+    \draw (-2,0) -- (10,0);
 
-  Here's a possible starting point for the timeline- feel free 
-  to delete it if you already have something :)
-  \centering
-  \begin{tikzpicture}
-       %draw horizontal line   
-       \draw (0,0) -- (8,0);
+    %draw vertical lines
+    \foreach \x in {-1.5,3,8}
+    \draw (\x cm,3pt) -- (\x cm,-3pt);
 
-       %draw hours
-       \foreach \x/\mydescription  in {0/Fall 2011,5/Aug 2012,8/Fall 2012} {% 
-            \draw (\x,0) node[below=7pt,anchor=east,xshift=0,rotate=45](\mydescription) {\mydescription}; 
-            \draw[] (\x,-0.3) -- (\x,0.3);
-            }
-            \node[below=of Fall 2011,align=center](PCC){PCC's big push};
-            \pause
-            \node[below=of PCC,align=center](SAC){Dept. meets and\\ forms committee};
-            \pause
-            \node[below=of SAC,align=center]{Initial experiments};
-            \pause
-            %\node[below=of May 2012,align=center]{Further talks};
-            \node[below=of Aug 2012,align=center](release){Release time \\ approved};
-            \pause
-            \node[below=of release,align=center]{One or two instructors?};
-            \pause
-            \node[below=of Fall 2012]{Project begins};
-   \end{tikzpicture}
-   
+    %draw nodes
+    \draw (-1.5,0) node[above=3pt] {$\sim$1995--2003};
+    \draw (3,0) node[above=3pt] {2003--2011};
+    \draw (8,0) node[above=3pt] {2011--present};
+
+\end{tikzpicture}
+\small
+\begin{columns}[t]
+    \begin{column}{.33\textwidth}
+        \begin{itemize}
+		\item[95] Arnie Pizer and Mike Gage at University of Rochester inspired by CAPA
+		\item[96] WeBWorK named, first courses taught
+		\item[97] used outside of Rochester %at Johns Hopkins first 
+		\item[02] Perl4$\to$Perl5, version control begins
+        \end{itemize}
+    \end{column}%
+    \hfill\pause
+    \begin{column}{.33\textwidth}
+        \begin{itemize}
+        		\item[03] WeBWorK 2:  Math Objects, quizzes, jsMath, more
+		\item[05] National Problem Library
+		\item[07] Moodle compatibility
+		\item[09] MathJax opens accessibility doors
+            	\item[10] MAA grant to disseminate
+        \end{itemize}
+    \end{column}%
+    \hfill\pause
+    \begin{column}{.33\textwidth}
+        \begin{itemize}
+        		\item[11] git repository and development accelerates:\\
+		WeBWorK 2.6 %configuration files, Math Achievements, more
+		\item[12]  WeBWorK 2.7 %essay answers, bootstrap CSS, equation editor, more
+		\item[13]  WeBWorK 2.8 % improved instructor interface, OPL, much more
+		\item[14] initial sketching of WeBWorK 3 is underway
+        \end{itemize}
+    \end{column}
+\end{columns}
+\end{frame}
+%----------------------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}{Servers in North America}
+\includegraphics[width=\textwidth]{mapUS}
+\end{frame}
+
+\begin{frame}{Servers all over the world}
+\includegraphics[width=\textwidth]{mapWorld}
+
 \end{frame}
 
 %----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 \begin{frame}[label=timeline]{PCC's journey\ldots}
    \begin{tikzpicture}
-      \pause
          % Spring 2010
          % Alex joins PCC and starts using WeBWorK on his own-
          % he spoke to Holli Adams (department chair at the time)
@@ -187,6 +215,8 @@
          % Fall 2013
          % Alex, Carl and Chris announce their success to the SAC,
          % which is very shortly followed by an EPIC crash on the UO server
+         \node[cloudy,fill=green, right=of summer2013](fall2013){Fall 2013};
+\pause
          \node[xshift=-0.8cm,yshift=-1.7cm,right=of summer2013]{\includegraphics[width=3cm]{lightning}};
          \node[cloudy,fill=green,draw=red, right=of summer2013](fall2013){Fall 2013};
    \end{tikzpicture}
